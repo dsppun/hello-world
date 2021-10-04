@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "dinesh-e2e-machine"
+        label "deploy-machine"
     }
 
     stages {
