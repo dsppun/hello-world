@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'go build main.go'
+                sh '/usr/local/go/bin/go build main.go'
             }
         }
         stage('Test') {
