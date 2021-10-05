@@ -7,14 +7,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh '/usr/local/go/bin/go build main.go'
+                sh '/bin/make build'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh 'chmod 777 main'
-                sh './main'
+                sh 'chmod 777 bin/main'
+                sh './bin/main'
             }
         }
         stage('Docker Image Build') {
